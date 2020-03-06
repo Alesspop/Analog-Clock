@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffb2d9 ;
+}
+
+.clock {
+    width: 315px;
+    height: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff url(analog_clock_694.png);
+    background-size: cover;
+    border-radius: 50%;
+    border: 20px solid  #ed76b3 ;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background:  #e3549d ;
+    border: 2px solid #fff;
+    z-index: 100000;
+    border-radius: 50%;
+}
+
+.hour,
+.minute,
+.second
+{
+    position: absolute;
+}
+
+.hour, .hour-hand
+{
+    width: 160px;
+    height: 160px;
+}
+
+.minute, .min-hand
+{
+    width: 190px;
+    height: 190px;
+}
+
+.second, .sec-hand
+{
+    width: 230px;
+    height: 230px;
+}
+
+.hour-hand, .min-hand, .sec-hand
+{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hour-hand::before
+{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background:  #3d2833 ;
+    z-index: 10;
+    border-radius: 9px 9px;
+}
+
+.min-hand::before
+{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background:   #714b5f  ;
+    z-index: 11;
+    border-radius: 9px 9px;
+}
+
+.sec-hand::before
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 135px;
+    background:  #ff0101;
+    z-index: 12;
+    border-radius: 9px 9px;
+}
+
